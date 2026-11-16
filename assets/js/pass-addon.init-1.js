@@ -1,1 +1,1 @@
-$("#password-addon").on("click",function(){0<$(this).siblings("input").length&&("password"==$(this).siblings("input").attr("type")?$(this).siblings("input").attr("type","input"):$(this).siblings("input").attr("type","password"))});
+$("#password-addon").on("click",function(){var e=$(this),t=e.siblings("input");if(0<t.length){var a="password"==t.attr("type");t.attr("type",a?"text":"password"),e.toggleClass("is-visible",a).attr("aria-pressed",a?"true":"false").attr("aria-label",a?"Ocultar contraseña":"Mostrar contraseña")}});

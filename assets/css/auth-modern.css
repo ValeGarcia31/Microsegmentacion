@@ -82,6 +82,9 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-card .form-control:focus{border-color:var(--sa-primary);background:#fff;box-shadow:0 0 0 4px var(--sa-ring)}
 .sa-card .input-group .form-control{border-top-right-radius:0;border-bottom-right-radius:0}
 .sa-card .input-group #password-addon{border:1px solid var(--sa-border);border-left:0;background:#f8fafc;border-radius:0 10px 10px 0;color:var(--sa-muted)}
+.sa-password-icon{width:18px;height:18px;display:block;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
+.sa-password-icon .sa-eye-slash{display:block}
+#password-addon.is-visible .sa-eye-slash{display:none}
 .sa-card .btn-primary{height:48px;border:0;border-radius:10px;font-weight:700;letter-spacing:.01em;
   background:linear-gradient(135deg,var(--sa-primary),var(--sa-primary-2));box-shadow:0 10px 24px -10px rgba(2,132,199,.7);transition:transform .15s,filter .15s;display:flex;align-items:center;justify-content:center;color:#fff}
 .sa-card .btn-primary:hover,.sa-card .btn-primary:focus{filter:brightness(1.08);transform:translateY(-1px);color:#fff}
