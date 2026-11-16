@@ -70,6 +70,13 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-ubuntu-ring{fill:none;stroke:#4ade80;stroke-width:11;stroke-linecap:round;stroke-dasharray:54 11;transform-origin:60px 60px;animation:sa-ubuntu-spin 24s linear infinite}
 .sa-ubuntu-dot{fill:#86efac;filter:drop-shadow(0 0 5px #4ade80)}
 @keyframes sa-ubuntu-spin{to{transform:rotate(360deg)}}
+.sa-matrix-logo{position:fixed;z-index:0;top:50%;width:min(28vw,360px);aspect-ratio:1;opacity:.62;filter:drop-shadow(0 0 14px rgba(25,255,122,.45));pointer-events:none}
+.sa-matrix-logo svg{display:block;width:100%;height:100%}.sa-matrix-left{left:1%;transform:translateY(-50%)}.sa-matrix-right{right:1%;transform:translateY(-50%)}
+.sa-matrix-logo .mx-col{font:700 10px "Courier New",monospace;fill:#19ff7a;animation:sa-mx-fall linear infinite}.sa-matrix-logo .mx-dim{opacity:.42}
+@keyframes sa-mx-fall{from{transform:translateY(0)}to{transform:translateY(400px)}}
+@media (max-width:900px){.sa-matrix-logo{width:24vw;opacity:.42}.sa-matrix-left{left:-2%}.sa-matrix-right{right:-2%}}
+@media (max-width:600px){.sa-matrix-logo{display:none}}
+
 
 .sa-wrap{box-sizing:border-box;flex:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(2rem,4vh,3rem) 1rem 1rem}
 .sa-brand{text-align:center;margin-bottom:1.5rem;color:#fff}
