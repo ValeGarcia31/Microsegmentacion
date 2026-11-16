@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Acceso | Seguridad Informática 1 - PanFreddy Hackers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Acceso al portal de Seguridad Informática 1" name="description">
+        <link rel="stylesheet" href="/assets/css/preloader.min-1.css" type="text/css">
+        <link href="/assets/css/bootstrap.min-1.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <link href="/assets/css/icons.min-1.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/app.min-1.css" id="app-style" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="/assets/css/auth-modern.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="sa-auth">
+        <main class="sa-wrap">
+            <header class="sa-brand">
+                <div class="sa-brand-icon"><i class="mdi mdi-shield-lock-outline"></i></div>
+                <h1>Seguridad Informática 1</h1>
+                <p>PanFreddy Hackers</p>
+            </header>
+            <section class="sa-card">
+                <div class="sa-card-head">
+                    <h2>Iniciar sesión</h2>
+                    <p>Ingrese sus credenciales.</p>
+                </div>
+                <form class="custom-form" action="" method="post">
+
+                    <% if (message === "1") { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i>
+                            Credenciales incorrectas.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% } else if (message === "2") { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i>
+                            Campos Vacios.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% } else if (message === "3") { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i>
+                            Contraseña Incorrecta.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% } else if (message === "4") { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i>
+                            Tu cuenta aún no está confirmada. Revisa tu correo.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% } else if (message === "5") { %>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-check-circle me-2"></i>
+                            Contraseña actualizada. Ya puedes iniciar sesión.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% } %>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="usu_correo">Correo Electronico</label>
+                        <input type="email" class="form-control" id="usu_correo" name="usu_correo" placeholder="Ingrese Correo Electronico" required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <label class="form-label" for="usu_pass">Contraseña</label>
+                            <a href="/recuperar" class="sa-link small mb-2">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <div class="input-group auth-pass-inputgroup">
+                            <input type="password" class="form-control" id="usu_pass" name="usu_pass" placeholder="Ingrese Contraseña" aria-label="Password" aria-describedby="password-addon" required>
+                            <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember-check">
+                            <label class="form-check-label" for="remember-check">Recuerdame</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="hidden" name="enviar" value="si">
+                        <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Acceder</button>
+                    </div>
+                </form>
+
+                <div class="sa-divider"></div>
+                <p class="sa-foot-link">¿No tienes cuenta? <a href="/register" class="sa-link">Regístrate</a></p>
+            </section>
+            <p class="sa-copy">© <script>document.write(new Date().getFullYear())</script> Seguridad Informática 1 · PanFreddy Hackers</p>
+        </main>
+
+        <!-- JAVASCRIPT -->
+        <script src="/assets/js/jquery.min-1.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min-1.js"></script>
+        <script src="/assets/js/metisMenu.min-1.js"></script>
+        <script src="/assets/js/simplebar.min-1.js"></script>
+        <script src="/assets/js/waves.min.js"></script>
+        <script src="/assets/js/feather.min-1.js"></script>
+        <script src="/assets/js/pace.min-1.js"></script>
+        <script src="/assets/js/pass-addon.init-1.js"></script>
+    </body>
+</html>

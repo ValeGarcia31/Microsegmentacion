@@ -1,0 +1,48 @@
+/* Auth Modern – Seguridad Informática 1 · PanFreddy Hackers (solo presentación) */
+:root{
+  --sa-bg:#0b1220; --sa-bg2:#111a2e; --sa-card:#ffffff; --sa-text:#0f172a; --sa-muted:#64748b;
+  --sa-border:#e2e8f0; --sa-primary:#0ea5a4; --sa-primary-2:#0284c7; --sa-ring:rgba(14,165,164,.25);
+  --sa-danger:#dc2626; --sa-radius:16px;
+}
+html,body{height:100%}
+body.sa-auth{
+  margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color:var(--sa-text); background:var(--sa-bg);
+  background-image:
+    radial-gradient(900px 500px at 10% -10%, rgba(14,165,164,.28), transparent 60%),
+    radial-gradient(800px 500px at 110% 110%, rgba(2,132,199,.30), transparent 60%),
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:auto,auto,32px 32px,32px 32px;
+}
+.sa-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1rem}
+.sa-brand{text-align:center;margin-bottom:1.5rem;color:#fff}
+.sa-brand-icon{width:56px;height:56px;margin:0 auto .9rem;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--sa-primary),var(--sa-primary-2));box-shadow:0 10px 30px -8px rgba(14,165,164,.6);font-size:28px;color:#fff}
+.sa-brand h1{font-size:1.65rem;font-weight:800;letter-spacing:-.02em;margin:0;color:#fff}
+.sa-brand p{margin:.35rem 0 0;font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5eead4}
+.sa-card{width:100%;max-width:440px;background:var(--sa-card);border-radius:var(--sa-radius);
+  padding:2.25rem 2rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06)}
+.sa-card-head{text-align:center;margin-bottom:1.5rem}
+.sa-card-head h2{font-size:1.25rem;font-weight:700;margin:0;color:var(--sa-text)}
+.sa-card-head p{font-size:.9rem;color:var(--sa-muted);margin:.4rem 0 0}
+.sa-card .form-label{font-size:.82rem;font-weight:600;color:#334155;margin-bottom:.4rem}
+.sa-card .form-control{height:46px;border-radius:10px;border:1px solid var(--sa-border);background:#f8fafc;font-size:.92rem;color:var(--sa-text);transition:border-color .15s,box-shadow .15s,background .15s}
+.sa-card .form-control:focus{border-color:var(--sa-primary);background:#fff;box-shadow:0 0 0 4px var(--sa-ring)}
+.sa-card .input-group .form-control{border-top-right-radius:0;border-bottom-right-radius:0}
+.sa-card .input-group #password-addon{border:1px solid var(--sa-border);border-left:0;background:#f8fafc;border-radius:0 10px 10px 0;color:var(--sa-muted)}
+.sa-card .btn-primary{height:48px;border:0;border-radius:10px;font-weight:700;letter-spacing:.01em;
+  background:linear-gradient(135deg,var(--sa-primary),var(--sa-primary-2));box-shadow:0 10px 24px -10px rgba(2,132,199,.7);transition:transform .15s,filter .15s;display:flex;align-items:center;justify-content:center;color:#fff}
+.sa-card .btn-primary:hover,.sa-card .btn-primary:focus{filter:brightness(1.08);transform:translateY(-1px);color:#fff}
+.sa-card a.sa-link,.sa-card .text-primary{color:var(--sa-primary-2)!important;font-weight:600;text-decoration:none}
+.sa-card a.sa-link:hover,.sa-card .text-primary:hover{text-decoration:underline}
+.sa-card .form-check-input:checked{background-color:var(--sa-primary);border-color:var(--sa-primary)}
+.sa-card .alert{border-radius:10px;font-size:.88rem;border:0}
+.sa-card .alert-danger{background:#fef2f2;color:#991b1b}
+.sa-card .alert-success{background:#ecfdf5;color:#065f46}
+.sa-card .validation-error{font-size:.78rem;margin-top:.3rem;min-height:0}
+.sa-divider{height:1px;background:var(--sa-border);margin:1.5rem 0 1.1rem}
+.sa-foot-link{text-align:center;font-size:.9rem;color:var(--sa-muted);margin:0}
+.sa-icon-circle{width:72px;height:72px;margin:0 auto 1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ecfeff;color:var(--sa-primary);font-size:34px}
+.sa-copy{margin-top:1.5rem;font-size:.78rem;color:#94a3b8;text-align:center}
+@media (max-width:480px){.sa-card{padding:1.75rem 1.25rem}.sa-brand h1{font-size:1.4rem}}
