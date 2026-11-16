@@ -85,9 +85,14 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-brand-icon svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 .sa-brand h1{font-size:1.65rem;font-weight:800;letter-spacing:-.02em;margin:0;color:#fff}
 .sa-brand p{margin:.35rem 0 0;font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5eead4}
-.sa-card{width:100%;max-width:440px;background:var(--sa-card);border-radius:var(--sa-radius);
-  padding:2.25rem 2rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06)}
+.sa-card{position:relative;overflow:hidden;width:100%;max-width:440px;background:#fff;border:1px solid rgba(94,234,212,.65);border-radius:var(--sa-radius);
+  padding:2.25rem 2rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(125,211,252,.16),0 0 28px rgba(14,165,164,.12)}
+.sa-card::before{content:"";position:absolute;top:0;left:8%;right:8%;height:3px;background:linear-gradient(90deg,transparent,var(--sa-primary),#8b5cf6,var(--sa-primary-2),transparent);box-shadow:0 0 14px rgba(14,165,164,.6)}
 .sa-card-head{text-align:center;margin-bottom:1.5rem}
+.sa-card-emblem{width:54px;height:54px;margin:0 auto 1rem;border:1px solid rgba(14,165,164,.42);border-radius:16px;background:linear-gradient(145deg,#ecfeff,#eef2ff);
+  color:#0f766e;box-shadow:0 8px 18px rgba(14,165,164,.18);animation:sa-emblem-float 4s ease-in-out infinite}
+.sa-card-emblem svg{width:100%;height:100%;padding:11px;box-sizing:border-box;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
+@keyframes sa-emblem-float{0%,100%{transform:translateY(0);box-shadow:0 8px 18px rgba(14,165,164,.18)}50%{transform:translateY(-3px);box-shadow:0 12px 24px rgba(14,165,164,.3)}}
 .sa-card-head h2{font-size:1.25rem;font-weight:700;margin:0;color:var(--sa-text)}
 .sa-card-head p{font-size:.9rem;color:var(--sa-muted);margin:.4rem 0 0}
 .sa-card .form-label{font-size:.82rem;font-weight:600;color:#334155;margin-bottom:.4rem}
