@@ -1,4 +1,94 @@
-<meta charset="UTF-8">
-<h1>Acceso al Sistema Correcto</h1>
-<p><%= nombre %></p>
-<a href="/logout">Cerrar sesión</a>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel | Seguridad Informática 1</title>
+        <link href="/assets/css/icons.min-1.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/auth-modern.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="sa-auth sa-home">
+        <main class="sa-wrap">
+            <div class="sa-binary-rain" aria-hidden="true">
+                <span>010110101001101011010010110100101101001011010</span>
+                <span>101001011010110100101101001011010010110101101</span>
+                <span>011010010110101101001011010110100101101001011</span>
+                <span>110100101101001011010110100101101011010010110</span>
+                <span>001011010110100101101011010010110100101101001</span>
+                <span>101101001011010110100101101001011010110100101</span>
+                <span>010110100101101011010010110101101001011010</span>
+            </div>
+            <div class="sa-ubuntu-watermark" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                    <circle class="sa-ubuntu-ring" cx="60" cy="60" r="31"></circle>
+                    <circle class="sa-ubuntu-dot" cx="60" cy="21" r="9"></circle>
+                    <circle class="sa-ubuntu-dot" cx="26" cy="80" r="9"></circle>
+                    <circle class="sa-ubuntu-dot" cx="94" cy="80" r="9"></circle>
+                </svg>
+            </div>
+
+            <header class="sa-home-topbar">
+                <div class="sa-home-brand">
+                    <span class="sa-home-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3 19 6v5c0 4.7-2.8 8.2-7 10-4.2-1.8-7-5.3-7-10V6l7-3Z"></path>
+                            <path d="M10 11h4M12 9v4"></path>
+                        </svg>
+                    </span>
+                    <span>SECURITY NODE / SI-01</span>
+                </div>
+                <a class="sa-home-logout" href="/logout">Cerrar sesión</a>
+            </header>
+
+            <section class="sa-home-content">
+                <div class="sa-home-heading">
+                    <div>
+                        <p class="sa-kicker">CONEXIÓN AUTORIZADA</p>
+                        <h1>Bienvenido, <%= nombre %></h1>
+                        <p class="sa-home-muted">Tu acceso al sistema ha sido verificado correctamente.</p>
+                    </div>
+                    <div class="sa-status"><span></span> SISTEMA PROTEGIDO</div>
+                </div>
+
+                <section class="sa-home-panel sa-course-panel">
+                    <div class="sa-panel-title">INFORMACIÓN ACADÉMICA <span class="sa-home-muted">SECURITY NODE / SI-01</span></div>
+                    <div class="sa-course-grid">
+                        <div><span>CLASE</span><strong>Seguridad Informática 1</strong></div>
+                        <div><span>SECCIÓN</span><strong>1800</strong></div>
+                        <div class="sa-course-teachers"><span>CATEDRÁTICOS</span><strong>Lic. Ulises Aldana Rivas<br>Lic. Jose Miguel Montalvo Cubas</strong></div>
+                    </div>
+                </section>
+
+                <div class="sa-home-grid">
+                    <section class="sa-home-panel sa-terminal-panel">
+                        <div class="sa-panel-title"><span>TERMINAL / SECURE-SHELL</span><span class="sa-live">● LIVE</span></div>
+                        <div class="sa-terminal">
+                            <p><span class="sa-prompt">root@security-node:~$</span> session --status</p>
+                            <p class="sa-terminal-success">[OK] Identidad validada</p>
+                            <p class="sa-terminal-success">[OK] Canal cifrado activo</p>
+                            <p class="sa-terminal-success">[OK] Monitoreo de seguridad iniciado</p>
+                            <p><span class="sa-prompt">root@security-node:~$</span> <span class="sa-cursor">_</span></p>
+                        </div>
+                    </section>
+
+                    <section class="sa-home-panel sa-metrics-panel">
+                        <div class="sa-panel-title">ESTADO DE LA RED</div>
+                        <div class="sa-metrics">
+                            <div><strong>100%</strong><span>CONEXIÓN</span></div>
+                            <div><strong>ON</strong><span>FIREWALL</span></div>
+                            <div><strong>0</strong><span>ALERTAS</span></div>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="sa-home-panel sa-activity-panel">
+                    <div class="sa-panel-title">ACTIVIDAD RECIENTE <span class="sa-home-muted">AUDITORÍA EN TIEMPO REAL</span></div>
+                    <div class="sa-activity-row"><span class="sa-activity-dot"></span><span>Inicio de sesión autorizado</span><time>AHORA</time></div>
+                    <div class="sa-activity-row"><span class="sa-activity-dot"></span><span>Protecciones del sistema activas</span><time>SEGURO</time></div>
+                </section>
+            </section>
+
+            <p class="sa-copy">© <script>document.write(new Date().getFullYear())</script> Seguridad Informática 1 · PanFreddy Hackers</p>
+        </main>
+    </body>
+</html>
