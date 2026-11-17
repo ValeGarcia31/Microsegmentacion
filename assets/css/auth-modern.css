@@ -71,10 +71,10 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-ubuntu-dot{fill:#86efac;filter:drop-shadow(0 0 5px #4ade80)}
 @keyframes sa-ubuntu-spin{to{transform:rotate(360deg)}}
 .sa-matrix-logo{position:fixed;z-index:0;top:50%;width:min(28vw,360px);aspect-ratio:1;opacity:.62;filter:drop-shadow(0 0 14px rgba(25,255,122,.45));pointer-events:none}
-.sa-matrix-logo svg{display:block;width:100%;height:100%}.sa-matrix-left{left:1%;transform:translateY(-50%)}.sa-matrix-right{right:1%;transform:translateY(-50%)}
+.sa-matrix-logo svg{display:block;width:100%;height:100%}.sa-matrix-left{left:7%;transform:translateY(-50%)}.sa-matrix-right{right:7%;transform:translateY(-50%)}
 .sa-matrix-logo .mx-col{font:700 10px "Courier New",monospace;fill:#19ff7a;animation:sa-mx-fall linear infinite}.sa-matrix-logo .mx-dim{opacity:.42}
 @keyframes sa-mx-fall{from{transform:translateY(0)}to{transform:translateY(400px)}}
-@media (max-width:900px){.sa-matrix-logo{width:24vw;opacity:.42}.sa-matrix-left{left:-2%}.sa-matrix-right{right:-2%}}
+@media (max-width:900px){.sa-matrix-logo{width:24vw;opacity:.42}.sa-matrix-left{left:3%}.sa-matrix-right{right:3%}}
 @media (max-width:600px){.sa-matrix-logo{display:none}}
 
 
@@ -91,6 +91,7 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-card-head{text-align:center;margin-bottom:1.5rem}
 .sa-card-emblem{width:54px;height:54px;margin:0 auto 1rem;border:1px solid rgba(14,165,164,.42);border-radius:16px;background:linear-gradient(145deg,#ecfeff,#eef2ff);
   color:#0f766e;box-shadow:0 8px 18px rgba(14,165,164,.18);animation:sa-emblem-float 4s ease-in-out infinite}
+.sa-card-emblem-gif{width:72px;height:72px;padding:0;object-fit:cover}
 .sa-card-emblem svg{width:100%;height:100%;padding:11px;box-sizing:border-box;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
 @keyframes sa-emblem-float{0%,100%{transform:translateY(0);box-shadow:0 8px 18px rgba(14,165,164,.18)}50%{transform:translateY(-3px);box-shadow:0 12px 24px rgba(14,165,164,.3)}}
 .sa-card-head h2{font-size:1.25rem;font-weight:700;margin:0;color:var(--sa-text)}
@@ -113,6 +114,13 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-card .alert-danger{background:#fef2f2;color:#991b1b}
 .sa-card .alert-success{background:#ecfdf5;color:#065f46}
 .sa-card .validation-error{font-size:.78rem;margin-top:.3rem;min-height:0}
+.sa-members{margin-top:1.5rem}
+.sa-members-panel .sa-members{margin:0;padding:1.15rem}
+.sa-members h3{margin:0 0 .75rem;color:var(--sa-text);font-size:.9rem;font-weight:700}
+.sa-members-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
+.sa-member{padding:.35rem .1rem}
+.sa-member strong{display:block;color:#dbeafe;font-size:.7rem;line-height:1.35}
+.sa-member span{display:block;margin-top:.25rem;color:#93c5fd;font-size:.68rem}
 .sa-divider{height:1px;background:var(--sa-border);margin:1.5rem 0 1.1rem}
 .sa-foot-link{text-align:center;font-size:.9rem;color:var(--sa-muted);margin:0}
 .sa-icon-circle{width:72px;height:72px;margin:0 auto 1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ecfeff;color:var(--sa-primary);font-size:34px}
@@ -138,5 +146,5 @@ body.sa-auth::after{content:"";position:fixed;z-index:0;left:-8%;right:-8%;botto
 .sa-metrics{display:grid;grid-template-columns:repeat(3,1fr);padding:1.6rem 1rem;gap:.5rem;text-align:center}.sa-metrics strong{display:block;color:#4ade80;font:700 1.45rem "Courier New",monospace;text-shadow:0 0 12px rgba(74,222,128,.35)}.sa-metrics span{display:block;margin-top:.5rem;color:#94a3b8;font:600 .62rem "Courier New",monospace}
 .sa-activity-panel{margin-top:1rem}.sa-activity-row{display:flex;align-items:center;padding:.85rem 1.15rem;border-bottom:1px solid rgba(147,197,253,.16);font-size:.84rem;color:#dbeafe}.sa-activity-row:last-child{border-bottom:0}.sa-activity-row time{margin-left:auto;color:#5eead4;font:600 .68rem "Courier New",monospace}
 @keyframes sa-cursor{50%{opacity:0}}
-@media (max-width:480px){.sa-wrap{padding-top:2rem}.sa-card{padding:1.75rem 1.25rem}.sa-brand h1{font-size:1.4rem}}
+@media (max-width:480px){.sa-wrap{padding-top:2rem}.sa-card{padding:1.75rem 1.25rem}.sa-brand h1{font-size:1.4rem}.sa-members-grid{grid-template-columns:1fr}}
 @media (max-width:700px){.sa-home .sa-wrap{padding:1rem}.sa-home-content{margin-top:1.5rem}.sa-home-heading{align-items:flex-start;flex-direction:column}.sa-home-grid,.sa-course-grid{grid-template-columns:1fr}.sa-home-topbar{padding:.75rem}.sa-home-brand{font-size:.62rem}.sa-home-logout{font-size:.72rem}.sa-activity-row{font-size:.74rem}}
