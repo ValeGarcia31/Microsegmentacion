@@ -52,19 +52,33 @@
     const rainGlobe = addElement(svg, "g", { class: "mx-dim", mask: "url(#" + globeId + ")" });
     const rainBright = addElement(svg, "g", { mask: "url(#" + brightId + ")" });
     [rainGlobe, rainBright].forEach(function (target, targetIndex) {
-      for (let x = 4, column = 0; x < 400; x += STEP, column += 1) {
-        let chars = "";
-        for (let k = 0; k < PERIOD * 2; k += 1) chars += Math.random() < .5 ? "0" : "1";
-        const text = addElement(target, "text", { class: "mx-col" });
-        text.style.animationDuration = (5 + Math.random() * 9).toFixed(1) + "s";
-        text.style.animationDelay = (-Math.random() * 12 - targetIndex).toFixed(1) + "s";
-        text.style.opacity = (.6 + Math.random() * .4).toFixed(2);
-        for (let k = 0; k < chars.length; k += 1) {
-          addElement(text, "tspan", { x: x, y: -400 + 10 * (k + 1) }).textContent = chars[k];
+      let x = 4;
+      let column = 0;
+      const renderChunk = function () {
+        const end = column + 8;
+        for (; x < 400 && column < end; x += STEP, column += 1) {
+          let chars = "";
+          for (let k = 0; k < PERIOD * 2; k += 1) chars += Math.random() < .5 ? "0" : "1";
+          const text = addElement(target, "text", { class: "mx-col" });
+          text.style.animationDuration = (5 + Math.random() * 9).toFixed(1) + "s";
+          text.style.animationDelay = (-Math.random() * 12 - targetIndex).toFixed(1) + "s";
+          text.style.opacity = (.6 + Math.random() * .4).toFixed(2);
+          for (let k = 0; k < chars.length; k += 1) {
+            addElement(text, "tspan", { x: x, y: -400 + 10 * (k + 1) }).textContent = chars[k];
+          }
         }
-      }
+        if (x < 400) setTimeout(renderChunk, 0);
+      };
+      setTimeout(renderChunk, 0);
     });
   }
 
-  document.querySelectorAll(".sa-matrix-logo").forEach(buildLogo);
+  const start = function () {
+    document.querySelectorAll(".sa-matrix-logo").forEach(buildLogo);
+  };
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(start, { timeout: 500 });
+  } else {
+    setTimeout(start, 100);
+  }
 }());
